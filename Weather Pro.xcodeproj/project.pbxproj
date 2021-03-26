@@ -13,10 +13,29 @@
 		E344E51A25ABAE46002E04F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E344E51825ABAE46002E04F4 /* Main.storyboard */; };
 		E344E51C25ABAE4B002E04F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E344E51B25ABAE4B002E04F4 /* Assets.xcassets */; };
 		E344E51F25ABAE4B002E04F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E344E51D25ABAE4B002E04F4 /* LaunchScreen.storyboard */; };
+		E344E52725ABB2A6002E04F4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344E52625ABB2A6002E04F4 /* Model.swift */; };
+		E39CC6EC25AC6BB800265963 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC6EB25AC6BB800265963 /* Constants.swift */; };
+		E39CC6F025AC6E1D00265963 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E39CC6EF25AC6E1D00265963 /* Default-568h@2x.png */; };
+		E39CC6F225AC6EB200265963 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39CC6F125AC6EB200265963 /* NetworkManager.swift */; };
+		E3FBE28425AD06AF00EB55BF /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FBE28325AD06AF00EB55BF /* CurrentWeatherData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		E32C32F42607824D004973E2 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.bplist;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
-		E344E50F25ABAE46002E04F4 /* Networking_9_CurrentWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking_9_CurrentWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E344E50F25ABAE46002E04F4 /* Weather Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E344E51225ABAE46002E04F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E344E51425ABAE46002E04F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E344E51625ABAE46002E04F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +43,11 @@
 		E344E51B25ABAE4B002E04F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E344E51E25ABAE4B002E04F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E344E52025ABAE4B002E04F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E344E52625ABB2A6002E04F4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E39CC6EB25AC6BB800265963 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E39CC6EF25AC6E1D00265963 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E39CC6F125AC6EB200265963 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E3FBE28325AD06AF00EB55BF /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +64,10 @@
 		E344E50625ABAE46002E04F4 = {
 			isa = PBXGroup;
 			children = (
-				E344E51125ABAE46002E04F4 /* Networking_9_CurrentWeather */,
+				E344E51125ABAE46002E04F4 /* Weather Pro */,
+				E344E51B25ABAE4B002E04F4 /* Assets.xcassets */,
+				E344E52025ABAE4B002E04F4 /* Info.plist */,
+				E39CC6EF25AC6E1D00265963 /* Default-568h@2x.png */,
 				E344E51025ABAE46002E04F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,43 +75,78 @@
 		E344E51025ABAE46002E04F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E344E50F25ABAE46002E04F4 /* Networking_9_CurrentWeather.app */,
+				E344E50F25ABAE46002E04F4 /* Weather Pro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E344E51125ABAE46002E04F4 /* Networking_9_CurrentWeather */ = {
+		E344E51125ABAE46002E04F4 /* Weather Pro */ = {
 			isa = PBXGroup;
 			children = (
-				E344E51225ABAE46002E04F4 /* AppDelegate.swift */,
-				E344E51425ABAE46002E04F4 /* SceneDelegate.swift */,
-				E344E51625ABAE46002E04F4 /* ViewController.swift */,
-				E344E51825ABAE46002E04F4 /* Main.storyboard */,
-				E344E51B25ABAE4B002E04F4 /* Assets.xcassets */,
-				E344E51D25ABAE4B002E04F4 /* LaunchScreen.storyboard */,
-				E344E52025ABAE4B002E04F4 /* Info.plist */,
+				E39CC6ED25AC6D8300265963 /* ViewControllers */,
+				E39CC6EA25AC6B5E00265963 /* View */,
+				E39CC6E825AC6B2D00265963 /* Models */,
+				E39CC6E925AC6B4500265963 /* SuportFile */,
 			);
-			path = Networking_9_CurrentWeather;
+			path = "Weather Pro";
+			sourceTree = "<group>";
+		};
+		E39CC6E825AC6B2D00265963 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E344E52625ABB2A6002E04F4 /* Model.swift */,
+				E3FBE28325AD06AF00EB55BF /* CurrentWeatherData.swift */,
+				E39CC6F125AC6EB200265963 /* NetworkManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E39CC6E925AC6B4500265963 /* SuportFile */ = {
+			isa = PBXGroup;
+			children = (
+				E344E51425ABAE46002E04F4 /* SceneDelegate.swift */,
+				E344E51225ABAE46002E04F4 /* AppDelegate.swift */,
+				E39CC6EB25AC6BB800265963 /* Constants.swift */,
+			);
+			path = SuportFile;
+			sourceTree = "<group>";
+		};
+		E39CC6EA25AC6B5E00265963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E344E51825ABAE46002E04F4 /* Main.storyboard */,
+				E344E51D25ABAE4B002E04F4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E39CC6ED25AC6D8300265963 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E344E51625ABAE46002E04F4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E344E50E25ABAE46002E04F4 /* Networking_9_CurrentWeather */ = {
+		E344E50E25ABAE46002E04F4 /* Weather Pro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E344E52325ABAE4B002E04F4 /* Build configuration list for PBXNativeTarget "Networking_9_CurrentWeather" */;
+			buildConfigurationList = E344E52325ABAE4B002E04F4 /* Build configuration list for PBXNativeTarget "Weather Pro" */;
 			buildPhases = (
 				E344E50B25ABAE46002E04F4 /* Sources */,
 				E344E50C25ABAE46002E04F4 /* Frameworks */,
 				E344E50D25ABAE46002E04F4 /* Resources */,
 			);
 			buildRules = (
+				E32C32F42607824D004973E2 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
-			name = Networking_9_CurrentWeather;
+			name = "Weather Pro";
 			productName = Networking_9_CurrentWeather;
-			productReference = E344E50F25ABAE46002E04F4 /* Networking_9_CurrentWeather.app */;
+			productReference = E344E50F25ABAE46002E04F4 /* Weather Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -94,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Vlad Lytvynets";
 				TargetAttributes = {
 					E344E50E25ABAE46002E04F4 = {
@@ -102,7 +164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E344E50A25ABAE46002E04F4 /* Build configuration list for PBXProject "Networking_9_CurrentWeather" */;
+			buildConfigurationList = E344E50A25ABAE46002E04F4 /* Build configuration list for PBXProject "Weather Pro" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +177,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E344E50E25ABAE46002E04F4 /* Networking_9_CurrentWeather */,
+				E344E50E25ABAE46002E04F4 /* Weather Pro */,
 			);
 		};
 /* End PBXProject section */
@@ -126,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E344E51F25ABAE4B002E04F4 /* LaunchScreen.storyboard in Resources */,
+				E39CC6F025AC6E1D00265963 /* Default-568h@2x.png in Resources */,
 				E344E51C25ABAE4B002E04F4 /* Assets.xcassets in Resources */,
 				E344E51A25ABAE46002E04F4 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39CC6F225AC6EB200265963 /* NetworkManager.swift in Sources */,
+				E39CC6EC25AC6BB800265963 /* Constants.swift in Sources */,
 				E344E51725ABAE46002E04F4 /* ViewController.swift in Sources */,
 				E344E51325ABAE46002E04F4 /* AppDelegate.swift in Sources */,
 				E344E51525ABAE46002E04F4 /* SceneDelegate.swift in Sources */,
+				E3FBE28425AD06AF00EB55BF /* CurrentWeatherData.swift in Sources */,
+				E344E52725ABB2A6002E04F4 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +259,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +320,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -285,15 +354,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Networking_9_CurrentWeather/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "wMd.Networking-9-CurrentWeather";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Weather-Pro";
+				PRODUCT_NAME = "Weather Pro";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,22 +371,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Networking_9_CurrentWeather/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "wMd.Networking-9-CurrentWeather";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Weather-Pro";
+				PRODUCT_NAME = "Weather Pro";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E344E50A25ABAE46002E04F4 /* Build configuration list for PBXProject "Networking_9_CurrentWeather" */ = {
+		E344E50A25ABAE46002E04F4 /* Build configuration list for PBXProject "Weather Pro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E344E52125ABAE4B002E04F4 /* Debug */,
@@ -326,7 +395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E344E52325ABAE4B002E04F4 /* Build configuration list for PBXNativeTarget "Networking_9_CurrentWeather" */ = {
+		E344E52325ABAE4B002E04F4 /* Build configuration list for PBXNativeTarget "Weather Pro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E344E52425ABAE4B002E04F4 /* Debug */,
